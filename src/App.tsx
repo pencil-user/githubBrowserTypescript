@@ -19,7 +19,6 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
 import Paper from '@mui/material/Paper'
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { PageExperimental } from './components/pages/PageExperimental';
 import { ThemeProviderContext } from './components/utilities/ThemeProviderContext';
 
 const theme = createTheme({
@@ -74,9 +73,6 @@ function MainSwitch() {
         <ProtectedRoute>
           <PageSearch />
         </ProtectedRoute>
-      </Route>
-      <Route path='/experimental'>
-        <PageExperimental />
       </Route>
       <Route path='/user/:user'>
         <ProtectedRoute>

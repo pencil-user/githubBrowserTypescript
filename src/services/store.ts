@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { querySlice } from './querySlice';
 import { authSlice } from './authSlice';
-import { stickySlice } from './stickySlice';
 
 const persistMiddleware = (storeAPI: any) => (next: any) => (action: any) => {
     console.log('dispatching', action)
@@ -24,7 +23,6 @@ export const store = configureStore({
     reducer: {
         [querySlice.reducerPath]: querySlice.reducer,
         'auth': authSlice.reducer,
-        'sticky': stickySlice.reducer
     },
     middleware: getDefaultMiddleware =>
         getDefaultMiddleware().concat(querySlice.middleware, persistMiddleware)

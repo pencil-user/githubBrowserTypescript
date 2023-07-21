@@ -11,7 +11,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Autocomplete from '@mui/material/Autocomplete';
 import useDebounce from '../hooks/useDebounce';
 import Box from '@mui/material/Box';
-import { useSticky } from '../hooks/useSticky';
 
 export function SearchAutocomplete() {
   const queryParams = useQueryParams()
@@ -20,9 +19,7 @@ export function SearchAutocomplete() {
 
   const [searchInputError, setSearchInputError] = useState<string | null>(null)
 
-  //const [value, setValue] = useState(queryParams?.q ? queryParams.q : '')
-
-  const [value, setValue] = useSticky('search')
+  const [value, setValue] = useState(queryParams?.q ? queryParams.q : '')
 
   const debouncedValue = useDebounce(value, 350)
 

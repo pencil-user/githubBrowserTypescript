@@ -48,13 +48,6 @@ export default function Header() {
           to={'/'}
         />
         <Tab
-          value={'/experimental'}
-          label='Experimental'
-          component={Link}
-
-          to={'/experimental'}
-        />
-        <Tab
           value={'/search'}
           label='Search Users'
 
