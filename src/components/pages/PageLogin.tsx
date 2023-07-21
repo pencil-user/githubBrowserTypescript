@@ -81,7 +81,7 @@ export function PageLogin() {
           sx={{ width: { xs: '90%', md: 500 } }}
           id="Token"
           name="Token"
-          label="GitHub Token"
+          label="Classic GitHub Token"
           onChange={(e) => { setToken(e.target.value.trim()); setPageError(null) }}
 
         />
